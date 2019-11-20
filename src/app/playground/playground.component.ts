@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ViewChild,
+  ElementRef
+} from '@angular/core';
 
 @Component({
   selector: 'app-playground',
@@ -6,10 +12,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  @ViewChild('header', { static: true }) set header(ref: ElementRef) {
+    console.log('Header is initialized in the component', ref);
+    ref.nativeElement.className = 'font-weight-bold text-primary';
   }
 
+  constructor() {}
+
+  ngOnInit() {}
 }
