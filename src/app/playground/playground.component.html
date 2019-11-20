@@ -1,1 +1,10 @@
 <h2>Template Demo</h2>
+<hr />
+
+<h4 [textContent]="header.textContent"></h4>
+<hr />
+<h4 #header>This header has a template reference variable</h4>
+<hr />
+<h4 [textContent]="header.textContent"></h4>
+<hr />
+<input type="text" class="form-control" value="{{ header.textContent }}" />
