@@ -1,6 +1,10 @@
 <h2>Template Demo</h2>
 <hr />
 
-<h4 appPremium>This header has the premium directive applied</h4>
+<h4 *appIfClone="true">Header will appear if the predicate is true</h4>
 
-<h4 appPremium>This header too has the premium directive applied</h4>
+<hr />
+
+<ng-template [appIfClone]="true">
+  <h4>Verbose style of structural directive</h4>
+</ng-template>
