@@ -1,12 +1,28 @@
-import { Directive, ElementRef } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  HostBinding,
+  HostListener
+} from '@angular/core';
 
 @Directive({
   selector: '[appPremium]'
 })
 export class PremiumDirective {
-  constructor(element: ElementRef) {
+  constructor() {
     console.log('Directive created');
-    element.nativeElement.className = 'font-weight-bold';
-    element.nativeElement.style.color = 'blue';
+  }
+
+  @HostBinding('className')
+  get cssProperty() {
+    return 'font-weight-bold';
+  }
+
+  @HostBinding('style.color')
+  fieldValue = 'green';
+
+  @HostListener('dblclick', ['$event'])
+  doubleClickHandler(args) {
+    console.log('Directive HostListener handled the double click event', args);
   }
 }
