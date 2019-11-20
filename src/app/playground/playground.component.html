@@ -1,7 +1,12 @@
 <h2>Template Demo</h2>
 <hr />
 
-<h4 appPremium>This header has the premium directive applied</h4>
+<h4
+  [appPremium]="'font-weight-bold'"
+  (dirCustomEvent)="componentHandler($event)"
+>
+  This header has the premium directive applied
+</h4>
 
 <hr />
 
