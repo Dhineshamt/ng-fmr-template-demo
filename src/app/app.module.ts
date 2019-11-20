@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlaygroundComponent } from './playground/playground.component';
+import { PremiumDirective } from './directives/premium.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
+    PremiumDirective
   ],
   imports: [
     BrowserModule
