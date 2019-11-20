@@ -1,1 +1,17 @@
 <h2>Template Demo</h2>
+<hr />
+
+<h4 *ngIf="predicate; else elseBlock">The predicate is true</h4>
+
+<ng-template #elseBlock>
+  <h4>The predicate is false</h4>
+</ng-template>
+
+<hr />
+
+<ng-container [ngSwitch]="country">
+  <p class="font-weight-bold" *ngSwitchCase="'IN'">India</p>
+  <p class="font-weight-bold" *ngSwitchCase="'US'">USA</p>
+  <p class="font-weight-bold" *ngSwitchCase="'FR'">France</p>
+  <p class="font-weight-bold" *ngSwitchDefault>Unknown</p>
+</ng-container>
