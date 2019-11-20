@@ -3,7 +3,12 @@
 <hr />
 
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let country of countries">
-    {{ country }}
+  <li
+    class="list-group-item"
+    *ngFor="let country of countries; index as i; first as f; last as l"
+  >
+    {{ i + 1 | number: '2.' }} {{ country }}
+    <span class="badge badge-primary" *ngIf="f">First</span>
+    <span class="badge badge-danger" *ngIf="l">Last</span>
   </li>
 </ul>
