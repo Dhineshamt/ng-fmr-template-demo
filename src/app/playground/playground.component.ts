@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent implements OnInit {
+  countries = [
+    'India',
+    'USA',
+    'France',
+    'Germany',
+    'Belgium',
+    'Austria',
+    'Russia',
+    'Brazil',
+    'Australia',
+    'Sweden',
+    'Denmark',
+    'Japan'
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
